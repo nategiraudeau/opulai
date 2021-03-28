@@ -1,0 +1,172 @@
+.bank-dashboard {
+    background: rgb(244, 250, 249);
+    display: flex;
+    align-items: stretch;
+    --db-spacing: 18px;
+    --db-border-radius: 12px;
+
+    .sidenav {
+        flex-shrink: 0;
+        width: 220px;
+        height: calc(100vh - 36px);
+        margin: var(--db-spacing);
+        border: 2px solid rgba(black, 0.05);
+        box-sizing: border-box;
+        border-radius: var(--db-border-radius);
+
+        h1 {
+            text-align: center;
+            margin: 24px 0 22px;
+            font-size: 28px;
+            font-family: "Poppins", sans-serif;
+            color: var(--theme-text-1);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: rgba(black, 0.05);
+        }
+
+        .links {
+            margin: 16px 0;
+            padding: 0 18px;
+            display: flex;
+            flex-direction: column;
+
+            .link {
+                display: flex;
+                align-items: center;
+                padding: 8px 0;
+                cursor: pointer;
+                transition: opacity 0.2s;
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--theme-text-1);
+                text-decoration: none;
+
+                svg {
+                    margin-right: 12px;
+                    transition: margin-right 0.2s cubic-bezier(0.5, 0.5, 0, 1);
+                }
+            }
+
+            .link:hover {
+                opacity: 0.5;
+
+                svg {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .page {
+        width: 100%;
+        padding: var(--db-spacing) 0;
+
+        .meeting-row {
+            height: 350px;
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+
+            .zoom-square {
+                background-image: url("../images/meeting.png");
+                background-size: cover;
+                background-position: left bottom;
+                background-repeat: no-repeat;
+                border-radius: var(--db-border-radius);
+                width: 100%;
+            }
+
+            .chat-square {
+                border: 2px solid rgba(black, 0.05);
+                box-sizing: border-box;
+                border-radius: var(--db-border-radius);
+                width: 100%;
+                margin: 0 var(--db-spacing);
+                position: relative;
+
+                .chat__header {
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 14px;
+
+                    h3 {
+                        margin: 0 0 0 8px;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                }
+
+                .chat__empty {
+                    opacity: 0.07;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -60%);
+                }
+
+                .chat__bar {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 12px;
+                    border-top: 2px solid rgba(black, 0.05);
+
+                    .leading {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        color: rgba(black, 0.4);
+
+                        .icon {
+                            color: black;
+                            margin-right: 14px;
+                        }
+                    }
+
+                    .send-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 16px;
+                        background: rgba(48, 161, 148, 0.1);
+                        color: #30a194;
+                    }
+                }
+            }
+        }
+
+        .dashboard-row {
+            border: 2px solid rgba(black, 0.05);
+            box-sizing: border-box;
+            border-radius: var(--db-border-radius);
+            margin: var(--db-spacing);
+            margin-left: 0;
+            box-sizing: border-box;
+
+            h4 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 28px 0 20px;
+            }
+
+            hr {
+                border: none;
+                height: 2px;
+                background: rgba(black, 0.05);
+            }
+        }
+    }
+}

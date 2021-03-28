@@ -1,0 +1,53 @@
+@use "appbar";
+@use "auth";
+@use "bank-db";
+
+body {
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Inter", sans-serif;
+    background: var(--theme-background);
+    background-image: linear-gradient(to bottom, #d5e1e3, #f1dbd6);
+
+    --theme-background: #d5e1e3;
+    --theme-text-1: #3b5961;
+}
+
+.row {
+    display: flex;
+}
+
+.landing-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 40px auto 0;
+
+    h1 {
+        font-size: 68px;
+        font-family: "Poppins", sans-serif;
+        color: #323861;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 140%;
+    }
+
+    .sign-up-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        height: 56px;
+        width: 240px;
+        background: #30a194;
+        border-radius: 30px;
+        transform-origin: bottom;
+    }
+}

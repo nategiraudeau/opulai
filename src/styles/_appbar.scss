@@ -1,0 +1,85 @@
+.appbar {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    --appbar-text-color: #3b5961;
+    --appbar-text--transparent: rgba(59, 89, 97, 0.05);
+    color: var(--appbar-text-color);
+    position: relative;
+
+    .appbar__title {
+        font-size: 28px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+    }
+
+    .appbar__links {
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .appbar__link {
+            font-size: 14px;
+            padding: 0 24px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            transition: opacity 0.17s;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .appbar__link:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .appbar__actions {
+        align-items: center;
+
+        .appbar__action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            height: 40px;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            color: var(--appbar-text-color);
+            letter-spacing: 0.2px;
+            cursor: pointer;
+            margin-left: 16px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+
+        .appbar__action:hover {
+            opacity: 0.8;
+        }
+
+        .appbar__action--secondary {
+            transition: background-color 0.2s;
+            border-radius: 20px;
+        }
+
+        .appbar__action--secondary:hover {
+            opacity: 1;
+            background: var(--appbar-text--transparent);
+        }
+
+        .appbar__action--primary {
+            background: #30a194;
+            color: white;
+            border-radius: 20px;
+        }
+    }
+}
